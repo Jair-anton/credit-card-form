@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Credit Card Form</string>
+    <string name="lbl_Informacion_tarjeta">Informacion de la tarjeta de credito</string>
+    <string name="lbl_Nombre">Nombre</string>
+    <string name="lbl_Apellido">Apellido</string>
+    <string name="lbl_Numero_tarjeta">Tarjeta</string>
+    <string name="lbl_Mes">Mes</string>
+    <string name="lbl_Año">Año</string>
+    <string name="lbl_Codigo">Codigo</string>
+    <string name="lbl_Direccion">Direccion</string>
+    <string name="lbl_Calle">Calle y numero</string>
+    <string name="lbl_Ciudad">Ciudad</string>
+    <string name="lbl_Estado">Estado</string>
+    <string name="lbl_Codigo_Postal">Codigo postal</string>
+
+
+</resources>
