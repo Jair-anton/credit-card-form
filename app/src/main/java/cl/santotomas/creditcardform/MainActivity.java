@@ -8,12 +8,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import cl.santotomas.creditcardform.modelo.usuario;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -78,12 +78,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 this.usuario.setCodigopostal(this.codigopostal_edit.getText().toString());
 
 
-                String repetir = this.etRegistroRepetir.getText().toString();
-
-
                 if( !this.usuario.esVacio() ){
-                    if( this.etRegistroClave.getText().toString().length() >= 4){
-                        if( this.usuario.claveIgual(repetir) ){
+                    if( this.tarjeta_edit.getText().toString().length() >= 16 && this.mes_edit.getText().toString().length() >= 2 && this.ano_edit.getText().toString().length() >= 2 && this.codigo.getText().toString().length() >= 3){
+
 
                             if( buscar_usuario() ){
                                 Toast.makeText(this, "Usuario ya existe en la Base de Datos.", Toast.LENGTH_LONG).show();
@@ -105,35 +102,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                     Toast.makeText(this, "Usuario "+this.usuario.getNombre()+"registrado correctamente", Toast.LENGTH_LONG).show();
                                     Log.i("LOGPRUEBA", "Usuario "+this.usuario.getNombre()+" registrado correctamente");
                                     finish();
+
+
                                 } else {
                                     Toast.makeText(this, "Error al guardar en la Base de Datos", Toast.LENGTH_LONG).show();
                                     Log.i("LOGPRUEBA", "Error al registrar usuario");
                                 }
                             }
 
-                        } else {
-                            Toast.makeText(this, "Clave no es correcta", Toast.LENGTH_LONG).show();
-                        }
                     } else {
-                        Toast.makeText(this, "La cantidad minima de caracteres son 5.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, "no cumple la cantidad minima de caracteres.", Toast.LENGTH_LONG).show();
                     }
                 } else {
-                    Toast.makeText(this, "Todos los campos son obligatorios", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "Los campos son obligatorios", Toast.LENGTH_LONG).show();
                 }
 
                 break;
-            case R.id.tvLogin: finish();
+            case R.id.hecho_edit: finish();
                 break;
         }
 
     }
-
-
-
-
-
-
-
 
 
 
@@ -161,8 +150,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Log.i("PruebaRegistro", String.valueOf(resultado) );
         return resultado;
     }
-
-
 
 
 

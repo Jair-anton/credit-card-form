@@ -111,7 +111,7 @@ public class usuario {
 
 
     public boolean esVacio(){
-        if( this.nombre.isEmpty() || this.tarjeta.isEmpty() || this.codigo.isEmpty() )
+        if( this.tarjeta.isEmpty() ||this.mes.isEmpty() || this.ano.isEmpty() || this.codigo.isEmpty() )
             return true;
         return false;
     }
