@@ -116,25 +116,9 @@ public class usuario {
         return false;
     }
 
-    public boolean claveIgual(String repetir){
-        if(this.codigo.equals(repetir))
-            return true;
-        return false;
-    }
 
 
-    public boolean emailIgual(String otroemail){
-        if( this.tarjeta.equals(otroemail))
-            return true;
-        return false;
-    }
 
-    public boolean login(String email, String password){
-        if( this.codigo.equals(email) && this.tarjeta.equals(password)){
-            return true;
-        }
-        return false;
-    }
 
     @Override
     public String toString() {
