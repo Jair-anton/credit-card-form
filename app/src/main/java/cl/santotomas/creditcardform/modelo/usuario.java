@@ -106,6 +106,10 @@ public class usuario {
         this.codigopostal = codigopostal;
     }
 
+
+
+
+
     public boolean esVacio(){
         if( this.nombre.isEmpty() || this.tarjeta.isEmpty() || this.codigo.isEmpty() )
             return true;

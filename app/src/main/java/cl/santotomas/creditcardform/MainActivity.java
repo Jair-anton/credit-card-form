@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final String TAG = "MainActivity";
 
 
-
     private EditText nombre_edit;
     private EditText apellido_edit;
     private EditText tarjeta_edit;
@@ -31,8 +30,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText ciudad_edit;
     private EditText estado_edit;
     private EditText codigopostal_edit;
-
-
     private usuario usuario;
 
     @Override
@@ -51,15 +48,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.estado_edit = findViewById(R.id.estado_edit);
         this.codigopostal_edit = findViewById(R.id.coigopostal_edit);
 
-
         this.usuario = new usuario();
 
-        Button btRegistroConfirmar = findViewById(R.id.btn_registrar);
+        Button btn_registrar = findViewById(R.id.btn_registrar);
+        btn_registrar.setOnClickListener(this);
 
 
 
-        btRegistroConfirmar.setOnClickListener(this);
-
+        Button btn_buscar = findViewById(R.id.btn_buscar);
+        btn_buscar.setOnClickListener(this);
 
     }
 
@@ -134,6 +131,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
+
+
+
+
+
+
     private long registrar_usuario(){
         AdminSQLiteOpenHelper base = new AdminSQLiteOpenHelper(this,"administracion1", null, 1);
         SQLiteDatabase baseDatos = base.getWritableDatabase();
@@ -162,7 +165,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-    // Funcion Validar Correo ya ingresado
+
     private boolean buscar_usuario(){
         AdminSQLiteOpenHelper base = new AdminSQLiteOpenHelper(this,"administracion1", null, 1);
         SQLiteDatabase baseDatos = base.getWritableDatabase();
