@@ -10,7 +10,7 @@ public class usuario {
     private String apellido;
     private String tarjeta;
     private String mes;
-    private String ano;
+    private String anho;
     private String codigo;
     private String calle;
     private String ciudad;
@@ -58,12 +58,12 @@ public class usuario {
         this.mes = mes;
     }
 
-    public String getAno() {
-        return ano;
+    public String getAnho() {
+        return anho;
     }
 
-    public void setAno(String ano) {
-        this.ano = ano;
+    public void setAnho(String anho) {
+        this.anho = anho;
     }
 
     public String getCodigo() {
@@ -111,7 +111,7 @@ public class usuario {
 
 
     public boolean esVacio(){
-        if( this.tarjeta.isEmpty() ||this.mes.isEmpty() || this.ano.isEmpty() || this.codigo.isEmpty() )
+        if( this.tarjeta.isEmpty() ||this.mes.isEmpty() || this.anho.isEmpty() || this.codigo.isEmpty() )
             return true;
         return false;
     }
@@ -128,7 +128,7 @@ public class usuario {
                 ", apellido='" + apellido + '\'' +
                 ", tarjeta='" + tarjeta + '\'' +
                 ", mes='" + mes + '\'' +
-                ", ano='" + ano + '\'' +
+                ", anho='" + anho + '\'' +
                 ", codigo='" + codigo + '\'' +
                 ", calleynumero='" + calle + '\'' +
                 ", ciudad='" + ciudad + '\'' +

@@ -5,7 +5,7 @@
     <string name="lbl_Apellido">Apellido</string>
     <string name="lbl_Numero_tarjeta">Tarjeta</string>
     <string name="lbl_Mes">Mes</string>
-    <string name="lbl_Año">Año</string>
+    <string name="lbl_Anho">Año</string>
     <string name="lbl_Codigo">Codigo</string>
     <string name="lbl_Direccion">Direccion</string>
     <string name="lbl_Calle">Calle y numero</string>

@@ -82,8 +82,8 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
-                android:hint="@string/lbl_Año"
-                android:id="@+id/ano_edit"
+                android:hint="@string/lbl_Anho"
+                android:id="@+id/anho_edit"
                 android:maxLength="4"
                 android:textSize="20dp" />
 

@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText apellido_edit;
     private EditText tarjeta_edit;
     private EditText mes_edit;
-    private EditText ano_edit;
+    private EditText anho_edit;
     private EditText codigo;
     private EditText calle_edit;
     private EditText ciudad_edit;
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.apellido_edit = findViewById(R.id.apellido_edit);
         this.tarjeta_edit = findViewById(R.id.tarjeta_edit);
         this.mes_edit = findViewById(R.id.mes_edit);
-        this.ano_edit = findViewById(R.id.ano_edit);
+        this.anho_edit = findViewById(R.id.anho_edit);
         this.codigo = findViewById(R.id.codigo_edit);
         this.calle_edit = findViewById(R.id.calle_edit);
         this.ciudad_edit = findViewById(R.id.ciudad_edit);
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 this.usuario.setApellido(this.apellido_edit.getText().toString());
                 this.usuario.setTarjeta(this.tarjeta_edit.getText().toString());
                 this.usuario.setMes(this.mes_edit.getText().toString());
-                this.usuario.setAno(this.ano_edit.getText().toString());
+                this.usuario.setAnho(this.anho_edit.getText().toString());
                 this.usuario.setCodigo(this.codigo.getText().toString());
                 this.usuario.setCalle(this.calle_edit.getText().toString());
                 this.usuario.setCiudad(this.ciudad_edit.getText().toString());
@@ -79,7 +79,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
                 if( !this.usuario.esVacio() ){
-                    if( this.tarjeta_edit.getText().toString().length() >= 16 && this.mes_edit.getText().toString().length() >= 2 && this.ano_edit.getText().toString().length() >= 2 && this.codigo.getText().toString().length() >= 3){
+                    if( this.tarjeta_edit.getText().toString().length() == 16 &&
+                            this.mes_edit.getText().toString().length() == 2 &&
+                            this.anho_edit.getText().toString().length() == 2 &&
+                            this.codigo.getText().toString().length() == 3 &&
+                            this.nombre_edit.getText().toString().length() != 0 &&
+                            this.apellido_edit.getText().toString().length() != 0 &&
+                            this.calle_edit.getText().toString().length() != 0 &&
+                            this.ciudad_edit.getText().toString().length() != 0 &&
+                            this.estado_edit.getText().toString().length() != 0 &&
+                            this.codigopostal_edit.getText().toString().length() != 0){
 
 
                             if( buscar_usuario() ){
@@ -91,7 +100,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                     this.apellido_edit.setText("");
                                     this.tarjeta_edit.setText("");
                                     this.mes_edit.setText("");
-                                    this.ano_edit.setText("");
+                                    this.anho_edit.setText("");
                                     this.codigo.setText("");
                                     this.calle_edit.setText("");
                                     this.ciudad_edit.setText("");
@@ -135,7 +144,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         registro.put("apellido", this.usuario.getApellido());
         registro.put("tarjeta", this.usuario.getTarjeta());
         registro.put("mes", this.usuario.getMes());
-        registro.put("ano", this.usuario.getAno());
+        registro.put("anho", this.usuario.getAnho());
         registro.put("codigo", this.usuario.getCodigo());
         registro.put("calle", this.usuario.getCalle());
         registro.put("ciudad", this.usuario.getCiudad());

@@ -1,6 +1,6 @@
 package cl.santotomas.creditcardform;
 
-        import android.os.Bundle;
+import android.os.Bundle;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,9 +19,9 @@ public class Dos extends AppCompatActivity {
         String apellido = datos.getString("el_apellido");
         String tarjeta = datos.getString("el_tarjeta");;
         String mes = datos.getString("el_mes");;
-        String ano = datos.getString("el_ano");;
+        String anho = datos.getString("el_anho");;
         String codigo = datos.getString("el_codigo");;
-        String calleynumero = datos.getString("el_calleynumero");;
+        String calle = datos.getString("el_calle");;
         String ciudad = datos.getString("el_ciudad");;
         String estado = datos.getString("el_estado");;
         String codigopostal = datos.getString("el_codigopostal");;
